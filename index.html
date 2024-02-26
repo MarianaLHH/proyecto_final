@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .contenedor1 {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      h1 {
+        align-items: center;
+        font-size: 45px;
+        font-family: Roboto;
+        font-weight: bold;
+        font-style: "Homer Simpson UI";
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        color: #4416c4;
+        background-color: #e3e3e3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor1">
+      <form action="">
+        <h1>Login</h1>
+        <label for="">Usuario</label>
+        <input type="text" name="u" id="" />
+        <label for="">Pasword</label>
+        <input type="password" name="c" id="" />
+        <input type="button" value="Ingresar" onclick="login(this.form)" />
+      </form>
+    </div>
+    <script>
+      // Funcion
+      function login(form) {
+        //pasar parametro que viene del form
+        if (form.u.value == "mariana") {
+          if (form.c.value == "123") {
+            location = "principal.html";
+          } else {
+            alert("error de password");
+          }
+        } else {
+          alert("error de usuario");
+        }
+      }
+    </script>
+  </body>
+</html>
